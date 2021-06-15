@@ -15,12 +15,10 @@ var intervallo = setInterval(function () {
     
     setTimeout(function(){
         clearInterval(intervallo);
-        userFiveList[0]= insertMaxNumber("Inserisci uno dei numeri", max , min);
-        userFiveList[1]= insertMaxNumber("Inserisci uno dei numeri", max , min);
-        userFiveList[2]= insertMaxNumber("Inserisci uno dei numeri", max , min);
-        userFiveList[3]= insertMaxNumber("Inserisci uno dei numeri", max , min);
-        userFiveList[4]= insertMaxNumber("Inserisci uno dei numeri", max , min);
-
+        for(var x = 0; x < fiveList.length; x++){
+            userFiveList[x]= insertMaxNumber("Inserisci uno dei numeri", max , min);
+        }
+      
         for(var i = 0 ; i<userFiveList.length; i++){
             if (isInArray(fiveList,userFiveList[i])){
                 flag++;
